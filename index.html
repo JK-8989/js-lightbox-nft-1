@@ -21,23 +21,29 @@
         <li><img src="./images/09963.png" alt="nft image" /></li>
       </ul>
     </div>
-    <div id="lightbox-overlay" class="active">
-      <img
+    <div  id="lightbox-overlay" class="active">
+      <div id="lightbox-image" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+        <img 
         src="./images/09963.png"
         alt="A bigger nft image in lightbox"
-        id="lightbox-image"
-      />
+        >
+      </div>
+          
+     </div>
     </div>
+  
     <script src="script.js"></script>
     <script type="text/javascript" src="vanilla-tilt.js"></script>
     <script>
         VanillaTilt.init(document.querySelector("#lightbox-image"), {
         max: 25,
-        speed: 400,
+        speed: 500,
         glare: true,
         "max-glare": 1,
         transition: true,
       });
+
+  
     </script>
      
  
