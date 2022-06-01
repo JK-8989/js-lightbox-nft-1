@@ -10,20 +10,20 @@
   <body>
     <div class="gallery-container">
       <ul class="gallery">
-        <li><img src="./images/09955.png" alt="nft image" /></li>
-        <li><img src="./images/09956.png" alt="nft image" /></li>
-        <li><img src="./images/09957.png" alt="nft image" /></li>
-        <li><img src="./images/09958.png" alt="nft image" /></li>
-        <li><img src="./images/09959.png" alt="nft image" /></li>
-        <li><img src="./images/09960.png" alt="nft image" /></li>
-        <li><img src="./images/09961.png" alt="nft image" /></li>
-        <li><img src="./images/09962.png" alt="nft image" /></li>
-        <li><img src="./images/09963.png" alt="nft image" /></li>
+        <li><img class="nfts" src="./images/09955.png" alt="nft image" /></li>
+        <li><img class="nfts" src="./images/09956.png" alt="nft image" /></li>
+        <li><img class="nfts" src="./images/09957.png" alt="nft image" /></li>
+        <li><img class="nfts" src="./images/09958.png" alt="nft image" /></li>
+        <li><img class="nfts" src="./images/09959.png" alt="nft image" /></li>
+        <li><img class="nfts" src="./images/09960.png" alt="nft image" /></li>
+        <li><img class="nfts" src="./images/09961.png" alt="nft image" /></li>
+        <li><img class="nfts" src="./images/09962.png" alt="nft image" /></li>
+        <li><img class="nfts" src="./images/09963.png" alt="nft image" /></li>
       </ul>
     </div>
-    <div  id="lightbox-overlay">
+    <div id="lightbox-overlay">
       <div id="lightbox-image" data-tilt  data-tilt-glare data-tilt-max-glare="0.8">
-        <img id="full-image"
+        <img class="nfts" id="full-image"
       src=""
       alt="A bigger nft image in lightbox"
       >
@@ -36,12 +36,11 @@
     <script src="script.js"></script>
     <script type="text/javascript" src="vanilla-tilt.js"></script>
     <script>
-        VanillaTilt.init(document.querySelector("#lightbox-image"), {
+        VanillaTilt.init(document.querySelectorAll("li"), {
         max: 25,
         speed: 500,
         glare: true,
         "max-glare": 1,
-        transition: true,
       });
 
   
