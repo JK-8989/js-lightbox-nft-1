@@ -12,8 +12,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: rgba(255, 255, 255, 0.5); */
-  
 }
 ul {
   display: grid;
@@ -26,33 +24,44 @@ li img {
   vertical-align: top;
   max-width: 200px;
   border-radius: 10px;
+  box-sizing: border-box;
 }
 li img:hover {
   transform: scale(1.02);
+  cursor: pointer;
+  border: 1px solid white;
+  box-shadow: rgba(255, 255, 255, 0.7) 0px 3px 8px;
 }
 #lightbox-overlay {
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
-  background-color: rgba(0,0,0, 0.5);
-  backdrop-filter: blur(12px);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: all 1s ease;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #lightbox-overlay.active {
   opacity: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: auto;
 }
 #lightbox-image {
   z-index: 15;
-  /* border-radius: 15px; */
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+              rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+              rgba(255, 255, 255, 0.08) 0px 1px 0px inset;          
 }
 #lightbox-image > img {
+  width: inherit;
   vertical-align: top;
 }
