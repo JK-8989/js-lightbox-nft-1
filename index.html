@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NFT-NakedClan</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="gallery-container">
-    <ul class="gallery">
-      <li><img src="./images/09955.png" alt="nft image"></li>
-      <li><img src="./images/09956.png" alt="nft image"></li>
-      <li><img src="./images/09957.png" alt="nft image"></li>
-      <li><img src="./images/09958.png" alt="nft image"></li>
-      <li><img src="./images/09959.png" alt="nft image"></li>
-      <li><img src="./images/09960.png" alt="nft image"></li>
-      <li><img src="./images/09961.png" alt="nft image"></li>
-      <li><img src="./images/09962.png" alt="nft image"></li>
-      <li><img src="./images/09963.png" alt="nft image"></li>
-    </ul>
-  </div>
-  <div id="lightbox-overlay" class="active"> 
-    <img src="./images/09963.png" alt="A bigger nft image in lightbox" id="lightbox-image">
-  </div>
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NFT-NakedClan</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="gallery-container">
+      <ul class="gallery">
+        <li><img src="./images/09955.png" alt="nft image" /></li>
+        <li><img src="./images/09956.png" alt="nft image" /></li>
+        <li><img src="./images/09957.png" alt="nft image" /></li>
+        <li><img src="./images/09958.png" alt="nft image" /></li>
+        <li><img src="./images/09959.png" alt="nft image" /></li>
+        <li><img src="./images/09960.png" alt="nft image" /></li>
+        <li><img src="./images/09961.png" alt="nft image" /></li>
+        <li><img src="./images/09962.png" alt="nft image" /></li>
+        <li><img src="./images/09963.png" alt="nft image" /></li>
+      </ul>
+    </div>
+    <div id="lightbox-overlay" class="active">
+      <img
+        src="./images/09963.png"
+        alt="A bigger nft image in lightbox"
+        id="lightbox-image"
+      />
+    </div>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelector("#lightbox-image"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+        "max-glare": 1,
+        transition: true,
+      });
+    </script>
+     
+ 
+  
+  </body>
 </html>
